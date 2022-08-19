@@ -4,7 +4,6 @@ let
   scoreEl = document.querySelector(".score"),
   timeEl = document.querySelector(".time"),
   endGameEl = document.querySelector(".end-game"),
-  settingBtn = document.querySelector(".setting-btn"),
   settings = document.querySelector(".settings"),
   settingForm = document.querySelector(".settings-form"),
   difficultyEl = document.querySelector(".difficulty"),
@@ -30,42 +29,53 @@ let
   randomWord,
   score = 0,
   time = 10,
+
   difficulty = localStorage.getItem('dif') !== null ?
-  localStorage.getItem('dif') : 'medium',
-  intervalTimer = setInterval( _ => {
+    localStorage.getItem('dif') : 'medium',
+
+  intervalTimer = setInterval(_ =>
+  {
     time--;
     timeEl.innerHTML = time + 's';
-    if(time === 0){
+    if(time === 0)
+    {
       clearInterval(intervalTimer);
-        $('body').modal({
-          title: 'Time Out ',
-          class: 'mini',
-          closeIcon: true,
-          content: `You're score is ${score}`,
-          actions: [{
-            text: 'Reload',
-            class: 'blue',
-            click: function(){location.reload();},
-          }]
+      $('body').modal({
+        title: 'Time Out ',
+        class: 'mini',
+        closeIcon: true,
+        content: `You're score is ${score}`,
+        actions: [{
+          text: 'Reload',
+          class: 'blue',
+          click: function() {location.reload();},
+        }]
       }).modal('show');
     }
   }, 1000),
-  getRandom = _ => {
+
+  getRandom = _ =>
+  {
     return words[Math.floor(Math.random() * words.length)];
   },
-  addWord = _ => {
+
+  addWord = _ =>
+  {
     randomWord = getRandom();
     word.innerHTML = randomWord;
   };
+
 $('.ui.dropdown').dropdown();
 difficultyEl.value = localStorage.getItem('dif') !== null ?
-localStorage.getItem('dif') : 'medium',
-text.focus();
+  localStorage.getItem('dif') : 'medium',
+  text.focus();
 addWord();
 
-text.addEventListener("input", e => {
+text.addEventListener("input", e =>
+{
   let insertedText = e.target.value;
-  if (insertedText == randomWord) {
+  if(insertedText == randomWord)
+  {
     addWord();
 
     score++;
@@ -83,12 +93,8 @@ text.addEventListener("input", e => {
     timeEl.innerHTML = time + 's';
   }
 });
-
-settingBtn.addEventListener('click',_ => {
-  settings.classList.toggle('hide')
-});
-
-settingForm.addEventListener('change', (e) => {
+settingForm.addEventListener('change', (e) =>
+{
   difficulty = e.target.value;
   localStorage.setItem('dif', difficulty);
-})
+});

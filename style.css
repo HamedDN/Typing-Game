@@ -1,32 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
 *{
   box-sizing: border-box;
   margin: 0; padding: 0;
 }
 
 body{
-  background-color: #808080;
+  background-color: #d4ffeb;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'DynaPuff', cursive;
 }
 
-button{
-  cursor: pointer;
+label[for="difficulty"]{
+  margin: 0 20px;
   font-size: 14px;
-  border-radius: 4px;
-  padding: 5px 15px;
-  outline: none; border: none;
+  font-weight: bold;
 }
 
-select{
-  width: 200px;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: #eee;
-  outline: none;
-}
 .setting-btn{
   position: absolute !important;
   bottom: 10px; left: 10px;
@@ -36,7 +29,7 @@ select{
   position: absolute;
   top: 0; left: 0;
   width: 100%;
-  background-color: rgba(0, 255, 255, 0.2);
+  background-color: rgb(0, 102, 255);
   height: 50px;
   display: flex;
   align-items: center;
@@ -51,8 +44,8 @@ select{
 }
 
 .container{
-  background-color: rgba(0, 0, 255, 0.2);
-  padding: 20px;
+  background-color: rgb(0, 162, 255);
+  padding: 10px 10px 20px 10px;
   border-radius: 10px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   color: #fff;
@@ -63,14 +56,14 @@ select{
 }
 
 .container h2{
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(255, 255, 255, 0.274);
   padding: 8px;
   border-radius: 10px;
   margin: 0 0 40px;
 }
 
 .container small{
-  color: #aaa;
+  color: rgb(255, 255, 255);
 }
 
 .container h1{
