@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="node_modules/fomantic-ui-css/semantic.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer src="node_modules/fomantic-ui-css/semantic.min.js"></script>
+    <script defer src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typing game</title>
+  </head>
+  <body>
+    <div class="ui animated button setting-btn" tabindex="0">
+      <div class="visible content">Setting</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
+    </div>
+
+    <div class="settings">
+      <form class="settings-form">
+        <div>
+          <label for="difficulty">Difficulty</label>
+          <select class="ui selection dropdown difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>Speed Typer</h2>
+      <small>Type the following : </small>
+      <h1 class="word"></h1>
+      <input
+        class="text"
+        type="text"
+        autocomplete="off"
+        placeholder="type here..."
+      />
+
+      <p class="time-container">Time Left : <span class="time">10s</span></p>
+
+      <p class="score-container">Score : <span class="score">0</span></p>
+
+      <div class="end-game"></div>
+    </div>
+  </body>
+</html>
