@@ -2,24 +2,21 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="node_modules/fomantic-ui-css/semantic.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script defer src="node_modules/fomantic-ui-css/semantic.min.js"></script>
-  <script defer src="script.js"></script>
+  <script src="script.js"></script>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>typing game</title>
+  <title>Speed Typer Game</title>
 </head>
 
 <body>
 
-  <div class="settings">
+  <div class="settings" id="settings">
     <form class="settings-form">
       <div>
         <label for="difficulty">Difficulty</label>
-        <select class="ui selection dropdown difficulty">
+        <select class="difficulty" id="difficulty">
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
           <option value="hard">Hard</option>
@@ -40,6 +37,8 @@
 
     <div class="end-game"></div>
   </div>
+
+  <script defer src="script.js"></script>
 </body>
 
 </html>
